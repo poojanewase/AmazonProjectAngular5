@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+      
+        <div class="col-lg-9" style="margin-left:150px">
+            <div class="well" style="margin-left:100px;margin-right:100px">
+                <div class="bs-example">
+                    <h3 style="align-self:center">Login</h3>
+                    <form [formGroup]="LoginForm" (ngSubmit)="userLogin()">
+                        <div class="form-group form-horizontal">
+                            <label for="inputEmail">Username</label>
+                                <input type="email" class="form-control" formControlName="userName" id="inputEmail" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" formControlName="userPassword" id="inputPassword" placeholder="Password" required>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn-lg btn-primary">Login</button>
+                        <br><br>
+                        <a href="#">Forgot Password?</a>
+                        <br>
+
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
