@@ -1,0 +1,67 @@
+
+
+     
+
+<div class="container" style="margin-left:14%">
+        <div *ngIf="true">
+                {{setData()}}
+            </div>
+    <div class="row">
+        <div class="col-md-5">
+
+            <div class="row">
+                <div>
+                    <img id="mainImage" height="50%" width="50%" />
+                </div>
+            </div>
+            <div class="row">
+                <table>
+                <tr>
+                    <td class="tdhover">
+                        <figure>
+                            <img id="sideImage1" src="assets/images/5t.jpg" height="100px" width="100px" />
+                        </figure>
+                    </td>
+                    <td class="tdhover">
+                        <figure>
+                            <img id="sideImage2" src="assets/images/5t.jpg" height="100px" width="100px" />
+                        </figure>
+                    </td>
+                    <td class="tdhover">
+                        <figure>
+                            <img id="sideImage3" src="assets/images/5t.jpg" height="100px" width="100px"/>
+                        </figure>
+                    </td>
+                    <td class="tdhover">
+                        <figure>
+                            <img id="sideImage4" src="assets/images/5t.jpg" height="100px" width="100px"/>
+                        </figure>
+                    </td>
+                </tr>
+                </table>
+
+            </div>
+                
+        </div>
+        <div class="col-md-5">
+            <h3 id="productName">Three Seater Sofa</h3>
+            <hr>
+            <h4 id="productPrice">Rs.4500</h4> 
+            <hr>
+            <div class="well">
+                <ul>
+                    <li id="line1"></li>
+                    <li id="line2">Primary Material: Fabric</li>
+                </ul>  
+
+            </div> 
+            <hr>
+                
+            <button type="button" (click)="setData()" class="btn btn-warning btn-lg">Place Order</button>
+
+
+        </div>
+    </div>
+</div>
+
+    

@@ -8,11 +8,11 @@
                     <form [formGroup]="LoginForm" (ngSubmit)="userLogin()">
                         <div class="form-group form-horizontal">
                             <label for="inputEmail">Username</label>
-                                <input type="email" class="form-control" formControlName="userName" id="inputEmail" placeholder="Username" required>
+                                <input type="email" class="form-control" formControlName="userName" id="userNameInput" placeholder="Username" required>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword">Password</label>
-                            <input type="password" class="form-control" formControlName="userPassword" id="inputPassword" placeholder="Password" required>
+                            <input type="password" class="form-control" formControlName="userPassword" id="userPasswordInput" placeholder="Password" required>
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox"> Remember me</label>
@@ -29,5 +29,41 @@
     </div>
     
 </div>
+
+
+
+<div id="login" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div style="padding: 20px; margin-left: 50px; margin-right: 50px">
+                            <h3>Login with your User-Id</h3>
+                            <hr>
+                            <p><input type="input" #user name="username" placeholder="E-mail" class="form-control"></p>
+    
+                            <p><input type="password" #upassword name="password" placeholder="Password"
+                                    class="form-control"></p>
+    
+                            <p style="text-align: center;"><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#password-reset"><small><u>Forgot Password?</u></small></a></p>
+                            <p>
+                                <button id="myButton" type="submit" class="btn btn-success btn-lg btn-block">Sign In</button></p>
+                            <p style="text-align: center;">Not Registered yet?</p>
+                            <p style="text-align: center;">
+                                <u><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#register">Register Here</a></u>
+                            </p>
+    
+                        </div>
+                    </form>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
 
 

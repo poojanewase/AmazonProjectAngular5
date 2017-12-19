@@ -14,6 +14,7 @@ import{loginValidator} from 'D:/AmazonApp/src/app/services/LoginValidation.servi
 export class loginComponent {
   title = 'Login';
 
+  //wrongPassword="false";
  constructor(private router:Router,private loginValidatorObj:loginValidator){};
    LoginForm=new FormGroup({
 
@@ -29,6 +30,10 @@ export class loginComponent {
     console.log(this.LoginForm.value);
     if(this.loginValidatorObj.validateCredentials(this.LoginForm.value)){
         this.router.navigate(['/dashboard']);
+    }
+    else{
+       alert("Password you entered is incorrect");
+       this.LoginForm.reset();
     }
   }
 
