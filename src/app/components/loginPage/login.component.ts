@@ -7,7 +7,6 @@ import{loginValidator} from 'D:/AmazonApp/src/app/services/LoginValidation.servi
   selector: 'login',
   templateUrl: './login.component.html',
   providers:[loginValidator]
-  //styleUrls: ['./app.component.css']
 })
 
 
