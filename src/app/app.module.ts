@@ -10,13 +10,14 @@ import{RouterModule} from '@angular/router'
 import{routingComponent} from 'D:/AmazonApp/src/app/components/RoutingComponent/routing.component'
 import{headerComponent} from 'D:/AmazonApp/src/app/components/headerPage/header.component'
 import{viewProductComponent}from 'D:/AmazonApp/src/app/components/viewPage/viewPage.component'
+//import { Validators } from '@angular/forms/src/validators';
 
 @NgModule({
   declarations: [
     AppComponent,loginComponent,dashboardComponent,routingComponent,headerComponent,viewProductComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule,
+    BrowserModule, FormsModule, ReactiveFormsModule, 
     RouterModule.forRoot([{path:'',component:routingComponent},
     {path:'dashboard',component:dashboardComponent},
     {path:'viewproduct/:id',component:viewProductComponent,pathMatch: 'full'},

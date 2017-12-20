@@ -3,15 +3,13 @@
      
 
 <div class="container" style="margin-left:14%">
-        <div *ngIf="true">
-                {{setData()}}
-            </div>
-    <div class="row">
-        <div class="col-md-5">
+      
+    <div class="row" *ngFor="let product of productArray">
+        <div class="col-md-5" >
 
             <div class="row">
                 <div>
-                    <img id="mainImage" height="50%" width="50%" />
+                    <img id="mainImage" src={{product.mainimg}} height="50%" width="50%" />
                 </div>
             </div>
             <div class="row">
@@ -19,22 +17,22 @@
                 <tr>
                     <td class="tdhover">
                         <figure>
-                            <img id="sideImage1" src="assets/images/5t.jpg" height="100px" width="100px" />
+                            <img id="sideImage1" src={{product.mainimg}} height="100px" width="100px" />
                         </figure>
                     </td>
                     <td class="tdhover">
                         <figure>
-                            <img id="sideImage2" src="assets/images/5t.jpg" height="100px" width="100px" />
+                            <img id="sideImage2" src={{product.mainimg}} height="100px" width="100px" />
                         </figure>
                     </td>
                     <td class="tdhover">
                         <figure>
-                            <img id="sideImage3" src="assets/images/5t.jpg" height="100px" width="100px"/>
+                            <img id="sideImage3" src={{product.mainimg}} height="100px" width="100px"/>
                         </figure>
                     </td>
                     <td class="tdhover">
                         <figure>
-                            <img id="sideImage4" src="assets/images/5t.jpg" height="100px" width="100px"/>
+                            <img id="sideImage4" src={{product.mainimg}} height="100px" width="100px"/>
                         </figure>
                     </td>
                 </tr>
@@ -44,14 +42,14 @@
                 
         </div>
         <div class="col-md-5">
-            <h3 id="productName">Three Seater Sofa</h3>
+            <h3 id="productName">{{product.name}}</h3>
             <hr>
-            <h4 id="productPrice">Rs.4500</h4> 
+            <h4 id="productPrice">Rs.{{product.price}}</h4> 
             <hr>
             <div class="well">
                 <ul>
-                    <li id="line1"></li>
-                    <li id="line2">Primary Material: Fabric</li>
+                    <li id="line1">{{product.description}}</li>
+                    
                 </ul>  
 
             </div> 

@@ -9,16 +9,15 @@ import{productDescription} from 'D:/AmazonApp/src/app/services/productDescriptio
 
 })
 export class dashboardComponent {
-  title = 'Dashboard';
-
   constructor(private router:Router,private productDescriptionObj:productDescription){};
-
+  productArray:any=[];
+  ngOnInit(){
+      this.productArray=this.productDescriptionObj.getProductArray();
+      console.log(this.productArray);
+  }
   
    onViewPage(id:string){
-      // var target=event.srcElement;
-      //  this.id=target.attributes.id;
-       console.log(id);
-      
+        console.log(id);
     this.router.navigate(['/viewproduct',id]);
   }
 }

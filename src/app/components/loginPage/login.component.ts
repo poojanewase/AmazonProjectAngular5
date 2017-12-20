@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, FormControl, Validator,Validators } from '@angular/forms';
 import{Router}from '@angular/router'
 import{loginValidator} from 'D:/AmazonApp/src/app/services/LoginValidation.service'
+
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -14,20 +15,15 @@ import{loginValidator} from 'D:/AmazonApp/src/app/services/LoginValidation.servi
 export class loginComponent {
   title = 'Login';
 
-  //wrongPassword="false";
  constructor(private router:Router,private loginValidatorObj:loginValidator){};
    LoginForm=new FormGroup({
 
-    userName :new FormControl(""),
-    userPassword : new FormControl(""),
+    userName :new FormControl(null,[Validators.required, Validators.minLength(5)]),
+    userPassword : new FormControl(null,[Validators.required, Validators.minLength(5)]),
   })
   
-
-  //LoginDetails:any;
-  
-
   userLogin(){
-    console.log(this.LoginForm.value);
+    //console.log(this.LoginForm.value);
     if(this.loginValidatorObj.validateCredentials(this.LoginForm.value)){
         this.router.navigate(['/dashboard']);
     }
@@ -36,6 +32,5 @@ export class loginComponent {
        this.LoginForm.reset();
     }
   }
-
 
 }
